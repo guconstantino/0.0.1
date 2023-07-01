@@ -1,6 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-import "./src/style/brandA/themes/default/color.js";
-import "./src/style/brandA/themes/default/color.css";
 export default {
   content: ["./src/**/*.tsx"],
   theme: {
