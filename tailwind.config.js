@@ -12,6 +12,14 @@ export default {
       Medium: "1em",
       Pill: "500em",
     },
+
+    borderWidth: {
+      none: 0,
+      hairline: "0.0625em",
+      thin: "0.125em",
+      thick: "0.25em",
+      heavy: "0.5em",
+    },
     colors: {
       Primary100: "#D9FFB3FF",
       Primary300: "#60C000FF",
@@ -53,6 +61,19 @@ export default {
       huge: "4em",
       giant: "4.5em",
       jumbo: "5em",
+    },
+
+    fontWeight: {
+      light: 300,
+      regular: 400,
+      medium: 500,
+      bold: 700,
+    },
+
+    lineHeight: {
+      small: "100%",
+      medium: "150%",
+      large: "200%",
     },
 
     opacity: {
