@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
 :root {
   --color themes-primary-100: #D9FFB3FF;
   --color themes-primary-300: #60C000FF;

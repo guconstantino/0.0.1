@@ -1,8 +1,17 @@
 /** @type {import('tailwindcss').Config} */
+import "./src/style/brandA/themes/default/brandA-color.js";
+
 export default {
   content: ["./src/**/*.tsx"],
   theme: {
     // Change
+    borderRadius: {
+      None: "0px",
+      Micro: "0.25em",
+      Small: "0.5em",
+      Medium: "1em",
+      Pill: "500em",
+    },
     colors: {
       Primary100: "#D9FFB3FF",
       Primary300: "#60C000FF",
@@ -30,6 +39,49 @@ export default {
       Support03: "#FFE7D1FF",
       Overlay700: "#000000B7",
     },
+
+    fontSize: {
+      quark: "0.75em",
+      nano: "0.875em",
+      extraSmall: "1em",
+      small: "1.25em",
+      medium: "1.5em",
+      large: "2em",
+      extraLarge: "2.5em",
+      big: "3em",
+      display: "3.5em",
+      huge: "4em",
+      giant: "4.5em",
+      jumbo: "5em",
+    },
+
+    opacity: {
+      Opaque: "1",
+      Semiopaque: "0.8",
+      Intense: "0.64",
+      Medium: "0.4",
+      Light: "0.32",
+      Semitransparent: "0.16",
+      Transparent: "0",
+    },
+
+    space: {
+      None: "0",
+      Quark: "0.25em",
+      Nano: "0.5em",
+      ExtraSmall: "1em",
+      Small: "1.5em",
+      Medium: "2em",
+      Large: "2.5em",
+      ExtraLarge: "3em",
+      Big: "3.5em",
+      Display: "4em",
+      Huge: "5em",
+      Giant: "7.5em",
+      Jumbo: "10em",
+      Immense: "12.5em",
+    },
+
     // ADD
     extend: {
       fontFamily: {
