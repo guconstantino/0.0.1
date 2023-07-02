@@ -10,6 +10,5 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <App />
     <br />
     {/* Components */}
-    {/* <Test /> */}
   </React.StrictMode>
 );
