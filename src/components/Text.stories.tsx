@@ -4,3 +4,5 @@ export default {
   title: "Component/Text",
   component: Text,
 };
+
+export const Default = {};
