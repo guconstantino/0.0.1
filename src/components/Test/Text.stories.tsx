@@ -1,4 +1,4 @@
-import { Text } from "./Text";
+import { Text } from "../Test/Text";
 
 export default {
   title: "Component/Text",
