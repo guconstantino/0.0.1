@@ -8,6 +8,7 @@ import * as spacing from "./src/style/globalVariables/spacing.js";
 
 //Brand Variables
 import * as brandColor from "./src/style/brandA/themes/colors/defaultLight.js";
+import * as fontFamily from "./src/style/brandA/typography/fontFamily.js";
 import * as fontSize from "./src/style/brandA/typography/fontSize.js";
 import * as fontWeight from "./src/style/brandA/typography/fontWeight.js";
 import * as lineHeight from "./src/style/brandA/typography/lineHeight.js";
@@ -119,7 +120,7 @@ export default {
     // ADD
     extend: {
       fontFamily: {
-        sans: "Ubuntu, sans-serif",
+        sans: fontFamily.Default,
       },
     },
   },

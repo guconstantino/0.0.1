@@ -2,29 +2,23 @@ import { clsx } from "clsx";
 import { ReactNode } from "react";
 
 // import from radix
-import * as AvatarRadix from "@radix-ui/react-avatar";
 import { Slot } from "@radix-ui/react-slot";
+
+//import from Global Variables
+import * as body from "../../style/globalVariables/textStyles/body";
 
 //props
 export interface avatarProps {
-  size?: "large" | "medium" | "small";
+  // size?: "large" | "medium" | "small";
   Text: ReactNode;
   asChild?: boolean;
 }
 
-export function Avatar({ size = "medium", Text, asChild }: avatarProps) {
+export function Avatar({ asChild }: avatarProps) {
   const Comp = asChild ? Slot : "div";
   return (
     <>
-      <Comp
-        className={clsx("font-bold", {
-          "text-extraLarge": size === "large",
-          "text-large": size === "medium",
-          "text-medium": size === "small",
-        })}
-      >
-        {Text}
-      </Comp>
+      <Comp className={clsx("font-bold", {})}>{Text}</Comp>
     </>
   );
 }
