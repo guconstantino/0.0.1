@@ -2,6 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { Avatar, avatarProps } from "./Avatar/Avatar";
 
 //Avatar
+
 export default {
   title: "Core/ Avatar",
   component: Avatar, // Precisa ser o componente exportado

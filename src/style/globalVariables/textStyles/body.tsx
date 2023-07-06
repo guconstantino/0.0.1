@@ -1,27 +1,30 @@
-import "../../../globalVariables/global.css";
+import { Slot } from "@radix-ui/react-slot";
+import { clsx } from "clsx";
+import { ReactNode } from "react";
 
-export function Regular() {
-  return (
-    <>
-      <p className="font-regular leading-medium text-extraSmall">
-        Body Regular
-      </p>
-    </>
-  );
+export interface BodyProps {
+  size?: "large" | "medium" | "small";
+  TextContent: ReactNode;
+  asChild?: boolean;
 }
 
-export function Medium() {
+export function BodyStyle({
+  size = "medium",
+  TextContent,
+  asChild,
+}: BodyProps) {
+  const Comp = asChild ? Slot : "p";
   return (
     <>
-      <p className="font-medium leading-medium text-extraSmall">Body Medium</p>
-    </>
-  );
-}
-
-export function Bold() {
-  return (
-    <>
-      <p className="font-bold leading-medium text-extraSmall">Body Medium</p>
+      <Comp
+        className={clsx("font-bold", {
+          "text-extraLarge": size === "large",
+          "text-large": size === "medium",
+          "text-medium": size === "small",
+        })}
+      >
+        {TextContent}
+      </Comp>
     </>
   );
 }

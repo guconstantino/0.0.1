@@ -1,13 +1,18 @@
 import { Slot } from "@radix-ui/react-slot";
 import { clsx } from "clsx";
 import { ReactNode } from "react";
-export interface TestProps {
+
+export interface HeadingProps {
   size?: "large" | "medium" | "small";
   TextContent: ReactNode;
   asChild?: boolean;
 }
 
-export function Test({ size = "medium", TextContent, asChild }: TestProps) {
+export function HeadingStyle({
+  size = "medium",
+  TextContent,
+  asChild,
+}: HeadingProps) {
   const Comp = asChild ? Slot : "span";
   return (
     <>
@@ -23,3 +28,4 @@ export function Test({ size = "medium", TextContent, asChild }: TestProps) {
     </>
   );
 }
+1;

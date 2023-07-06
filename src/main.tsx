@@ -11,8 +11,5 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <App />
     <br />
     {/* Components */}
-    <body.Regular />
-    <body.Medium />
-    <body.Bold />
   </React.StrictMode>
 );
