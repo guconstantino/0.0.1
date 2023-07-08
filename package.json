@@ -1,5 +1,4 @@
 {
-  "homepage": "https://github.com/guconstantino/0.0.1",
   "name": "0.0.1",
   "private": true,
   "version": "0.0.0",
@@ -10,9 +9,7 @@
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "predeploy": "npm run build && npm run storybook",
-    "deploy": "gh-pages-d dist"
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.3",
