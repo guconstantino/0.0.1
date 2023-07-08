@@ -100,7 +100,7 @@ export default {
       Transparent: opacity.Transparent,
     },
 
-    space: {
+    spacing: {
       None: spacing.None,
       Quark: spacing.Quark,
       Nano: spacing.Nano,

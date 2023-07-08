@@ -1,4 +1,4 @@
-export const quark = "0.75em";
+export const quark = "0.750em";
 export const nano = "0.875em";
 export const extraSmall = "1em";
 export const small = "1.25em";

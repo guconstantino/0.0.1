@@ -1,18 +1,18 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { TextHeading, TextHeadingProps } from "./heading";
+import { TextLink, LinkProps } from "./link";
 
-// // Heading
+// // Subtitle
 export default {
   title: "Global Variables/Text Styles",
-  component: TextHeading,
+  component: TextLink,
   argTypes: {
     variant: {
-      options: ["Large Heading", "Medium Heading", "Small Heading"],
+      options: ["Small Link", "Medium Link", "Large Link"],
       control: {
         type: "radio",
       },
     },
-    headingTextContent: {
+    linkTextContent: {
       control: {
         type: "text",
       },
@@ -23,9 +23,10 @@ export default {
       },
     },
   },
-} as Meta<TextHeadingProps>;
-export const Heading: StoryObj<TextHeadingProps> = {
+} as Meta<LinkProps>;
+
+export const Link: StoryObj<LinkProps> = {
   args: {
-    headingTextContent: "Olá, eu sou um Heading",
+    linkTextContent: "Olá, eu sou um Subtitle",
   },
 };

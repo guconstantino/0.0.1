@@ -2,28 +2,29 @@ import { Slot } from "@radix-ui/react-slot";
 import { clsx } from "clsx";
 import { ReactNode } from "react";
 
-export interface HeadingProps {
-  size?: "large" | "medium" | "small";
-  TextContent: ReactNode;
+export interface TextHeadingProps {
+  variant?: "Large Heading" | "Medium Heading" | "Small Heading";
+  headingTextContent: ReactNode;
   asChild?: boolean;
 }
 
-export function HeadingStyle({
-  size = "medium",
-  TextContent,
+export function TextHeading({
+  variant = "Large Heading",
+  headingTextContent,
   asChild,
-}: HeadingProps) {
-  const Comp = asChild ? Slot : "span";
+}: TextHeadingProps) {
+  const Comp = asChild ? Slot : "div";
   return (
     <>
       <Comp
-        className={clsx("font-bold", {
-          "text-extraLarge": size === "large",
-          "text-large": size === "medium",
-          "text-medium": size === "small",
+        className={clsx({
+          "leading-large font-bold text-extraLarge":
+            variant === "Large Heading",
+          "leading-large font-bold text-large": variant === "Medium Heading",
+          "leading-large font-bold text-medium": variant === "Small Heading",
         })}
       >
-        {TextContent}
+        {headingTextContent}
       </Comp>
     </>
   );

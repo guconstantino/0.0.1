@@ -1,18 +1,18 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { TextHeading, TextHeadingProps } from "./heading";
+import { TitleStyle, TitleProps } from "./title";
 
-// // Heading
+// // Title
 export default {
   title: "Global Variables/Text Styles",
-  component: TextHeading,
+  component: TitleStyle,
   argTypes: {
     variant: {
-      options: ["Large Heading", "Medium Heading", "Small Heading"],
+      options: ["Small Title", "Medium Title", "Large Title"],
       control: {
         type: "radio",
       },
     },
-    headingTextContent: {
+    TitleTextContent: {
       control: {
         type: "text",
       },
@@ -23,9 +23,10 @@ export default {
       },
     },
   },
-} as Meta<TextHeadingProps>;
-export const Heading: StoryObj<TextHeadingProps> = {
+} as Meta<TitleProps>;
+
+export const Title: StoryObj<TitleProps> = {
   args: {
-    headingTextContent: "Olá, eu sou um Heading",
+    TitleTextContent: "Olá, eu sou um Title",
   },
 };

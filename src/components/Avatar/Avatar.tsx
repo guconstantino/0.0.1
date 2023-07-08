@@ -14,28 +14,35 @@ import clsx from "clsx";
 export interface avatarProps {
   Size?: "Large" | "Medium" | "Small" | "Extra Small";
   Type?: "Square" | "Circle";
-  Text: ReactNode;
+  avatarText: ReactNode;
   asChild?: boolean;
 }
 
-export function Avatar({ Size, Type, Text, asChild }: avatarProps) {
+export function Avatar({
+  Size = "Large",
+  Type = "Circle",
+  avatarText,
+  asChild,
+}: avatarProps) {
   const Comp = asChild ? Slot : "div";
   return (
     <>
       <Comp
         className={clsx(
-          "flex justify-center items-center p-Nano rounded-Small bg-Primary900 text-Neutral100 ",
+          "flex justify-center items-center p-Nano bg-Primary900 !text-Neutral100",
           {
             "w-ExtraLarge h-ExtraLarge": Size === "Large",
             "w-Large h-large": Size === "Medium",
             "w-Medium h-Medium": Size === "Small",
             "w-Small h-small ": Size === "Extra Small",
+            "rounded-Small ": Type === "Square",
+            "rounded-Pill ": Type === "Circle",
           }
         )}
       >
-        {TextStyle.BodyStyle({
+        {TextStyle.textBody({
           variant: "Bold Body",
-          TextContent: Text,
+          bodyTextContent: avatarText,
         })}
       </Comp>
     </>

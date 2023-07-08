@@ -7,16 +7,38 @@ export default {
   title: "Core/ Avatar",
   component: Avatar, // Precisa ser o componente exportado
   args: {
-    Text: "Aa",
+    avatarText: "Aa",
   },
   argTypes: {
     Size: {
-      options: ["small", "medium", "large"],
+      options: ["Extra Small", "Small", "Medium", "Large"],
       control: {
         type: "inline-radio",
+      },
+    },
+    avatarText: {
+      control: {
+        type: "text",
       },
     },
   },
 } as Meta<avatarProps>;
 
 export const Default: StoryObj<avatarProps> = {};
+
+// export const CustomComponent: StoryObj<HeadingProps> = {
+//   args: {
+//     asChild: true,
+//     TextContent: <p className="text-Primary500">Eu sou um paragráfo</p>,
+//   },
+//   argTypes: {
+//     TextContent: {
+//       // control: {
+//       //   type: null,
+//       // },
+//       table: {
+//         disable: true,
+//       },
+//     },
+//   },
+// };

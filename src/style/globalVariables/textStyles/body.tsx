@@ -1,29 +1,28 @@
 import { Slot } from "@radix-ui/react-slot";
 import { clsx } from "clsx";
 import { ReactNode } from "react";
-
-export interface BodyProps {
-  size?: "large" | "medium" | "small";
-  TextContent: ReactNode;
+export interface TextBodyProps {
+  variant?: "Bold Body" | "Medium Body" | "Regular Body";
+  bodyTextContent: ReactNode;
   asChild?: boolean;
 }
 
-export function BodyStyle({
-  size = "medium",
-  TextContent,
+export function textBody({
+  variant = "Regular Body",
+  bodyTextContent,
   asChild,
-}: BodyProps) {
-  const Comp = asChild ? Slot : "p";
+}: TextBodyProps) {
+  const Comp = asChild ? Slot : "span";
   return (
     <>
       <Comp
-        className={clsx("font-bold", {
-          "text-extraLarge": size === "large",
-          "text-large": size === "medium",
-          "text-medium": size === "small",
+        className={clsx("leading-medium", "text-extraSmall", {
+          "font-bold": variant === "Bold Body",
+          "font-medium": variant === "Medium Body",
+          "font-regular": variant === "Regular Body",
         })}
       >
-        {TextContent}
+        {bodyTextContent}
       </Comp>
     </>
   );

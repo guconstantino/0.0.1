@@ -1,41 +1,32 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { BodyStyle, BodyProps } from "./body";
+import { textBody, TextBodyProps } from "./body";
 
+// // Body
 export default {
-  title: "Text Style/Body",
-  component: BodyStyle, // Precisa ser o componente exportado
-  args: {
-    TextContent: "Olá, eu sou um Header",
-  },
+  title: "Global Variables/Text Styles",
+  component: textBody,
   argTypes: {
-    size: {
-      options: ["small", "medium", "large"],
+    variant: {
+      options: ["Regular Body", "Medium Body", "Bold Body"],
       control: {
-        type: "inline-radio",
+        type: "radio",
+      },
+    },
+    bodyTextContent: {
+      control: {
+        type: "text",
+      },
+    },
+    asChild: {
+      table: {
+        disable: true,
       },
     },
   },
-} as Meta<BodyProps>;
+} as Meta<TextBodyProps>;
 
-export const Default: StoryObj<BodyProps> = {};
-
-// Para habilitar mais variações
-// export const Medium: StoryObj<HeadingProps> = {};
-// export const Small: StoryObj<HeadingProps> = {};
-
-// export const CustomComponent: StoryObj<HeadingProps> = {
-//   args: {
-//     asChild: true,
-//     TextContent: <p className="text-Primary500">Eu sou um paragráfo</p>,
-//   },
-//   argTypes: {
-//     TextContent: {
-//       // control: {
-//       //   type: null,
-//       // },
-//       table: {
-//         disable: true,
-//       },
-//     },
-//   },
-// };
+export const Body: StoryObj<TextBodyProps> = {
+  args: {
+    bodyTextContent: "Olá, eu sou um Body",
+  },
+};
