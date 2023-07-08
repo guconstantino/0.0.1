@@ -6,6 +6,10 @@ import * as borderWidth from "./src/style/globalVariables/borderWidth.js";
 import * as opacity from "./src/style/globalVariables/opacity.js";
 import * as spacing from "./src/style/globalVariables/spacing.js";
 
+// Component Assets
+
+// import { imgAvatar } from "./src/assets/img/avatar/assetsAvatar.js";
+
 //Brand Variables
 import * as brandColor from "./src/style/brandA/themes/colors/defaultLight.js";
 import * as fontFamily from "./src/style/brandA/typography/fontFamily.js";
@@ -121,8 +125,7 @@ export default {
 
     //Avatar
     backgroundImage: {
-      "avatar-picture":
-        "url('./src/assets/img/avatar/default-avatar-image.jpg')",
+      "avatar-picture": "url('src/assets/img/avatar/default-avatar-image.jpg')",
     },
     // ADD
     extend: {

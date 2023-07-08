@@ -7,15 +7,15 @@ export default {
   title: "Core/ Avatar",
   component: Avatar, // Precisa ser o componente exportado
   argTypes: {
+    Type: {
+      control: {
+        type: "inline-radio",
+      },
+    },
     Size: {
       options: ["Extra Small", "Small", "Medium", "Large"],
       control: {
         type: "select",
-      },
-    },
-    Type: {
-      control: {
-        type: "inline-radio",
       },
     },
     avatarText: {
@@ -30,6 +30,19 @@ export default {
       control: "boolean",
       defaultValue: true,
       name: "Has Picture?",
+    },
+    imgUrl: {
+      control: {
+        type: "text",
+      },
+      table: {
+        disable: true,
+      },
+    },
+    isEnable: {
+      control: "boolean",
+      defaultValue: true,
+      name: "Is Enable?",
     },
     asChild: {
       table: {
