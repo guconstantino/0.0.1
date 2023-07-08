@@ -9,10 +9,11 @@
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "storybook": "storybook dev",
+    "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "chromatic": "npx chromatic --project-token=chpt_6e09a03301ecf88"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.3",
@@ -37,6 +38,7 @@
     "@typescript-eslint/parser": "^5.59.0",
     "@vitejs/plugin-react": "^4.0.0",
     "autoprefixer": "^10.4.14",
+    "chromatic": "^6.19.9",
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
@@ -48,5 +50,7 @@
     "tailwindcss": "^3.3.2",
     "typescript": "^5.0.2",
     "vite": "^4.3.9"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "0.0.1@0.0.0"
 }
