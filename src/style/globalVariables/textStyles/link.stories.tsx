@@ -17,11 +17,6 @@ export default {
         type: "text",
       },
     },
-    linkUrl: {
-      control: {
-        type: "text",
-      },
-    },
     asChild: {
       table: {
         disable: true,
@@ -32,7 +27,6 @@ export default {
 
 export const Link: StoryObj<LinkProps> = {
   args: {
-    linkTextContent: "Olá, eu sou um Link",
-    linkUrl: "#",
+    linkTextContent: "Olá, eu sou um Subtitle",
   },
 };
