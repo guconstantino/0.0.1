@@ -117,6 +117,13 @@ export default {
       Immense: spacing.Immense,
     },
 
+    //Assets for components
+
+    //Avatar
+    backgroundImage: {
+      "avatar-picture":
+        "url('./src/assets/img/avatar/default-avatar-image.jpg')",
+    },
     // ADD
     extend: {
       fontFamily: {

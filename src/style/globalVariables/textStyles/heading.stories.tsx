@@ -7,7 +7,7 @@ export default {
   component: TextHeading,
   argTypes: {
     variant: {
-      options: ["Large Heading", "Medium Heading", "Small Heading"],
+      options: ["Small Heading", "Medium Heading", "Large Heading"],
       control: {
         type: "radio",
       },

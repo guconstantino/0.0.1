@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { TextCaption, CaptionProps } from "./Caption";
+import { TextCaption, CaptionProps } from "./caption";
 
 // // Caption
 export default {

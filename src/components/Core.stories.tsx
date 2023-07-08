@@ -1,17 +1,19 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Avatar, avatarProps } from "./Avatar/Avatar";
+import { Avatar, AvatarProps } from "./Avatar/Avatar";
 
 //Avatar
 
 export default {
   title: "Core/ Avatar",
   component: Avatar, // Precisa ser o componente exportado
-  args: {
-    avatarText: "Aa",
-  },
   argTypes: {
     Size: {
       options: ["Extra Small", "Small", "Medium", "Large"],
+      control: {
+        type: "select",
+      },
+    },
+    Type: {
       control: {
         type: "inline-radio",
       },
@@ -20,25 +22,25 @@ export default {
       control: {
         type: "text",
       },
+      table: {
+        disable: true, //Exibir input de texto
+      },
+    },
+    hasPicture: {
+      control: "boolean",
+      defaultValue: true,
+      name: "Has Picture?",
+    },
+    asChild: {
+      table: {
+        disable: true,
+      },
     },
   },
-} as Meta<avatarProps>;
+} as Meta<AvatarProps>;
 
-export const Default: StoryObj<avatarProps> = {};
-
-// export const CustomComponent: StoryObj<HeadingProps> = {
-//   args: {
-//     asChild: true,
-//     TextContent: <p className="text-Primary500">Eu sou um paragráfo</p>,
-//   },
-//   argTypes: {
-//     TextContent: {
-//       // control: {
-//       //   type: null,
-//       // },
-//       table: {
-//         disable: true,
-//       },
-//     },
-//   },
-// };
+export const Default: StoryObj<AvatarProps> = {
+  args: {
+    avatarText: "Aa",
+  },
+};
