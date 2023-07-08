@@ -1,0 +1,14 @@
+export const None = "0";
+export const Quark = "0.25em";
+export const Nano = "0.5em";
+export const ExtraSmall = "1em";
+export const Small = "1.5em";
+export const Medium = "2em";
+export const Large = "2.5em";
+export const ExtraLarge = "3em";
+export const Big = "3.5em";
+export const Display = "4em";
+export const Huge = "5em";
+export const Giant = "7.5em";
+export const Jumbo = "10em";
+export const Immense = "12.5em";
