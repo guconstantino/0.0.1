@@ -1,2 +1,5 @@
-export const imgAvatar =
-  "url('src/assets/img/avatar/default-avatar-image.jpg')";
+// import { AvatarProps } from "../../../components/Avatar/Avatar";
+
+// function GetAvatarUrl({ bgImage }: AvatarProps) {
+//   return bgImage;
+// }
